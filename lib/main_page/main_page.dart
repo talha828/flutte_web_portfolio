@@ -32,9 +32,19 @@ class _MainPageState extends State<MainPage> {
                 height: width * 0.55,
                 width: double.maxFinite,
                 decoration: BoxDecoration(
-                  image: DecorationImage(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
+                  border: Border.all(color:Colors.black,),
+                  image: const DecorationImage(
                     image: ExactAssetImage("assets/main_background.jpg"),
                     fit: BoxFit.cover,
+
                   ),
                 ),
                 child: ClipRRect(
@@ -54,7 +64,7 @@ class _MainPageState extends State<MainPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               // Nav bar heading
-                              Container(
+                               Container(
                                 child: Row(
                                   children: [
                                     Text(
@@ -165,14 +175,14 @@ class _MainPageState extends State<MainPage> {
                                           animatedTexts: [
                                             TypewriterAnimatedText(
                                                 'Flutter Developer!',
-                                                speed: Duration(
+                                                speed:const  Duration(
                                                     milliseconds: 200)),
                                             TypewriterAnimatedText(
                                                 'Little bit UI/UX designer',
-                                                speed: Duration(
+                                                speed: const Duration(
                                                     milliseconds: 200)),
                                             TypewriterAnimatedText('Freelancer',
-                                                speed: Duration(
+                                                speed: const Duration(
                                                     milliseconds: 200)),
                                           ],
                                           onTap: () {
@@ -220,6 +230,7 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
               ),
+              // serverces
               Container(
                 padding: EdgeInsets.symmetric(horizontal: width * 0.04),
                 height: width * 0.53,
@@ -244,7 +255,7 @@ class _MainPageState extends State<MainPage> {
                       height: width * 0.045,
                     ),
                     Column(
-                      children: [
+                      children: const[
                         Text(
                           "I am here for convert your great ideas into reality and lift up your life to your dream. our best things is we believe in quality of work",
                           textAlign: TextAlign.center,
@@ -288,7 +299,7 @@ class _MainPageState extends State<MainPage> {
                               SizedBox(
                                 height: width * 0.02,
                               ),
-                              Text(
+                              const Text(
                                 "Flutter Mobile App",
                                 style: TextStyle(
                                   fontWeight: FontWeight.w600
@@ -297,7 +308,7 @@ class _MainPageState extends State<MainPage> {
                               SizedBox(
                                 height: width * 0.02,
                               ),
-                          Text(
+                          const Text(
                             "with 3+ year of industrial Experiences and the 20+ happy client now we are able to say that i will built your app with greate quality and according to your dreame and vision",
                             textAlign: TextAlign.center,
                             style: TextStyle(
@@ -327,7 +338,7 @@ class _MainPageState extends State<MainPage> {
                               SizedBox(
                                 height: width * 0.02,
                               ),
-                              Text(
+                              const Text(
                                 "Flutter Website",
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600
@@ -336,7 +347,7 @@ class _MainPageState extends State<MainPage> {
                               SizedBox(
                                 height: width * 0.02,
                               ),
-                              Text(
+                              const Text(
                                 "with 3+ year of industrial Experiences and the 20+ happy client now we are able to say that i will built your app with greate quality and according to your dreame and vision",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
@@ -366,7 +377,7 @@ class _MainPageState extends State<MainPage> {
                               SizedBox(
                                 height: width * 0.02,
                               ),
-                              Text(
+                              const Text(
                                 "UI/UX design",
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600
@@ -375,7 +386,7 @@ class _MainPageState extends State<MainPage> {
                               SizedBox(
                                 height: width * 0.02,
                               ),
-                              Text(
+                              const Text(
                                 "with 3+ year of industrial Experiences and the 20+ happy client now we are able to say that i will built your app with greate quality and according to your dreame and vision",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
@@ -386,10 +397,304 @@ class _MainPageState extends State<MainPage> {
                           ),
                         ),
                       ],
-                    )
+                    ),
+                    SizedBox(width: width * 0.02,),
                   ],
                 ),
-              )
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: width * 0.04),
+                //height: width * 0.53,
+                width: double.maxFinite,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SizedBox(
+                      height: width * 0.045,
+                    ),
+                    Text(
+                      "Case Study",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: width * 0.04,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                    SizedBox(
+                      height: width * 0.045,
+                    ),
+                    Column(
+                      children: const[
+                        const Text(
+                          "These case study prove of our work also it`s show how we can deal with our clients and what are neccessary things that we focus ",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                        const Text(
+                          "Customer satisfiction are priority our",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: width * 0.045,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: width * 0.2,
+                          padding: EdgeInsets.symmetric(vertical: width * 0.02,horizontal: width * 0.02),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black.withOpacity(0.3))),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                radius: width * 0.03,
+                                backgroundColor: Colors.red,
+                                child: Icon(
+                                  Icons.note_add_outlined,
+                                  size: width * 0.03,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(
+                                height: width * 0.02,
+                              ),
+                              const Text(
+                                "Notes Up App",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600
+                                ),
+                              ),
+                              SizedBox(
+                                height: width * 0.02,
+                              ),
+                              const Text(
+                                "Concept of this app is here user can trades of there notes ,Chat with there friend and connect with there school mates. here you can also buy and sale your notes",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.w600
+                                ),)
+                            ],
+                          ),
+                        ),
+                        SizedBox(width: width * 0.02,),
+                        Container(
+                          width: width * 0.2,
+                          padding: EdgeInsets.symmetric(vertical: width * 0.02,horizontal: width * 0.02),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black.withOpacity(0.3))),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                radius: width * 0.03,
+                                backgroundColor: Colors.red,
+                                child: Icon(
+                                  Icons.web,
+                                  size: width * 0.03,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(
+                                height: width * 0.02,
+                              ),
+                              const Text(
+                                "Tracker App",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600
+                                ),
+                              ),
+                              SizedBox(
+                                height: width * 0.02,
+                              ),
+                              const Text(
+                                "Concept of this app is here company owner track there salesman in real time. this tracker also show the all shops of company all round the karachi",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.w600
+                                ),)
+                            ],
+                          ),
+                        ),
+                        SizedBox(width: width * 0.02,),
+                        Container(
+                          width: width * 0.2,
+                          padding: EdgeInsets.symmetric(vertical: width * 0.02,horizontal: width * 0.02),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black.withOpacity(0.3))),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                radius: width * 0.03,
+                                backgroundColor: Colors.red,
+                                child: Icon(
+                                  Icons.design_services,
+                                  size: width * 0.03,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(
+                                height: width * 0.02,
+                              ),
+                              const Text(
+                                "Recipe Hero",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600
+                                ),
+                              ),
+                              SizedBox(
+                                height: width * 0.02,
+                              ),
+                              const Text(
+                                "Recipt hero is a where you can see a complete guidence and how to cook your delicious food and also its suggest you disious if according to your food list",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.w600
+                                ),)
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: width * 0.02,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: width * 0.2,
+                          padding: EdgeInsets.symmetric(vertical: width * 0.02,horizontal: width * 0.02),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black.withOpacity(0.3))),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                radius: width * 0.03,
+                                backgroundColor: Colors.red,
+                                child: Icon(
+                                  Icons.mobile_friendly,
+                                  size: width * 0.03,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(
+                                height: width * 0.02,
+                              ),
+                              const Text(
+                                "Suq - Express",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600
+                                ),
+                              ),
+                              SizedBox(
+                                height: width * 0.02,
+                              ),
+                              const Text(
+                                "In this app user can buy the all parts of there bikes. Basically this is a E-commerce app where you can only purchase a bikes parts and you have varitous of diffrent brands",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.w600
+                                ),)
+                            ],
+                          ),
+                        ),
+                        SizedBox(width: width * 0.02,),
+                        Container(
+                          width: width * 0.2,
+                          padding: EdgeInsets.symmetric(vertical: width * 0.02,horizontal: width * 0.02),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black.withOpacity(0.3))),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                radius: width * 0.03,
+                                backgroundColor: Colors.red,
+                                child: Icon(
+                                  Icons.web,
+                                  size: width * 0.03,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(
+                                height: width * 0.02,
+                              ),
+                              const Text(
+                                "Suq - Salesman",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600
+                                ),
+                              ),
+                              SizedBox(
+                                height: width * 0.02,
+                              ),
+                              const Text(
+                                "Suq - Salesman app for salesman where they can create new shops, create orders, accept payment, this also have a some greate feature such as It`s always tracked",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.w600
+                                ),)
+                            ],
+                          ),
+                        ),
+                        SizedBox(width: width * 0.02,),
+                        Container(
+                          width: width * 0.2,
+                          padding: EdgeInsets.symmetric(vertical: width * 0.02,horizontal: width * 0.02),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black.withOpacity(0.3))),
+                          child: Column(
+                            children: [
+                              CircleAvatar(
+                                radius: width * 0.03,
+                                backgroundColor: Colors.red,
+                                child: Icon(
+                                  Icons.design_services,
+                                  size: width * 0.03,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(
+                                height: width * 0.02,
+                              ),
+                              const Text(
+                                "Quick Notes",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w600
+                                ),
+                              ),
+                              SizedBox(
+                                height: width * 0.02,
+                              ),
+                              const Text(
+                                "Quick Notes is provide the plat from where user can save task in the from of notes and with repect to there category. the main things about this is we are useing a sql database here.",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.w600
+                                ),)
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: width * 0.02,),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
